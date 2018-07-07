@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Target Generator</title>
+    <style type="text/css">
+        div.container {
+            width: 100%;
+            border: 1px solid gray;
+        }
+
+        nav {
+            float: left;
+            max-width: 180px;
+            margin: 0;
+            padding: 1em;
+        }
+
+        article {
+            border-left: 1px solid gray;
+            padding: 1em;
+            overflow: hidden;
+            vertical-align: central;
+            text-align: center;
+        }
+
+        table {
+            border: 1px solid gray;
+            width: 180px;
+            margin-bottom: 10px;
+        }
+
+        img {
+            border: 1px solid gray;
+        }
+
+        input.ringheader {
+            width: 35px;
+            border: none;
+        }
+
+        input.ringvalue {
+            width: 35px;
+        }
+
+        input.ringcheck {
+            width: 35px;
+            border: none;
+        }
+
+        input.header {
+            width: 120px;
+            border: none;
+        }
+
+        input.parameter {
+            width: 25px;
+        }
+    </style>
+</head>
+<body onload='reload()'>
+    <div class="container">
+        <nav>
+            <table>
+                <tr>
+                    <td>
+                        <input class="ringheader" value="Ring" readonly="readonly" />
+                    </td>
+                    <td>
+                        <input class="ringheader" value="Size" readonly="readonly" />
+                    </td>
+                    <td style="width: 35px">
+                        <input class="ringheader" value="IsBull" readonly="readonly" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="ringheader" value="X" readonly="readonly" />
+                    </td>
+                    <td>
+                        <input id="sizex" class="ringvalue" value="1" oninput='reload()' />
+                    </td>
+                    <td style="width: 35px;">
+                        <input id="bullx" class="ringcheck" type="checkbox" checked="checked" onclick='reload()' />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="ringheader" value="10" readonly="readonly" />
+                    </td>
+                    <td>
+                        <input id="size10" class="ringvalue" value="1.5" oninput='reload()' />
+                    </td>
+                    <td style="width: 35px">
+                        <input id="bull10" class="ringcheck" type="checkbox" checked="checked" onclick='reload()' /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="ringheader" value="9" readonly="readonly" />
+                    </td>
+                    <td>
+                        <input id="size9" class="ringvalue" value="2" oninput='reload()' />
+                    </td>
+                    <td style="width: 35px">
+                        <input id="bull9" class="ringcheck" type="checkbox" checked="checked" onclick='reload()' /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="ringheader" value="8" readonly="readonly" />
+                    </td>
+                    <td>
+                        <input id="size8" class="ringvalue" value="2.5" oninput='reload()' />
+                    </td>
+                    <td style="width: 35px">
+                        <input id="bull8" class="ringcheck" type="checkbox" checked="checked" onclick='reload()' /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="ringheader" value="7" readonly="readonly" />
+                    </td>
+                    <td>
+                        <input id="size7" class="ringvalue" value="3" oninput='reload()' />
+                    </td>
+                    <td style="width: 35px">
+                        <input id="bull7" class="ringcheck" type="checkbox" checked="checked" onclick='reload()' /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="ringheader" value="6" readonly="readonly" />
+                    </td>
+                    <td>
+                        <input id="size6" class="ringvalue" value="3.5" oninput='reload()' />
+                    </td>
+                    <td style="width: 35px">
+                        <input id="bull6" class="ringcheck" type="checkbox" onclick='reload()' /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="ringheader" value="5" readonly="readonly" />
+                    </td>
+                    <td>
+                        <input id="size5" class="ringvalue" value="4" oninput='reload()' />
+                    </td>
+                    <td style="width: 35px">
+                        <input id="bull5" class="ringcheck" type="checkbox" onclick='reload()' /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="ringheader" value="4" readonly="readonly" />
+                    </td>
+                    <td>
+                        <input id="size4" class="ringvalue" value="4.5" oninput='reload()' />
+                    </td>
+                    <td style="width: 35px">
+                        <input id="bull4" class="ringcheck" type="checkbox" onclick='reload()' /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="ringheader" value="3" readonly="readonly" />
+                    </td>
+                    <td>
+                        <input id="size3" class="ringvalue" value="5" oninput='reload()' />
+                    </td>
+                    <td style="width: 35px">
+                        <input id="bull3" class="ringcheck" type="checkbox" onclick='reload()' /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="ringheader" value="2" readonly="readonly" />
+                    </td>
+                    <td>
+                        <input id="size2" class="ringvalue" value="5.5" oninput='reload()' />
+                    </td>
+                    <td style="width: 35px">
+                        <input id="bull2" class="ringcheck" type="checkbox" onclick='reload()' /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="ringheader" value="1" readonly="readonly" />
+                    </td>
+                    <td>
+                        <input id="size1" class="ringvalue" value="6" oninput='reload()' />
+                    </td>
+                    <td style="width: 35px">
+                        <input id="bull1" class="ringcheck" type="checkbox" onclick='reload()' /></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <input class="header" type='text' readonly="readonly" value="Header Text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type='text' value="100 m" id="topLeftText" oninput='reload()' />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type='text' value="Date____________" id="topRightText" oninput='reload()' />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type='text' value="Competitor______________" id="bottomLeftText" oninput='reload()' />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type='text' value="Score_____X_____" id="bottomRightText" oninput='reload()' />
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <input class="header" type='text' readonly="readonly" value="Header Font Size" /></td>
+                    <td>
+                        <input class="parameter" id="fontSize" type="text" value="10" oninput='reload()' />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="header" type='text' readonly="readonly" value="Score Font Size" /></td>
+                    <td>
+                        <input class="parameter" id="bullfontSize" type="text" value="10" oninput='reload()' />
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <input class="header" type='text' readonly="readonly" value="Dimensions (inches)" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="header" type='text' readonly="readonly" value="Width:" /></td>
+                    <td>
+                        <input class="parameter" id="targetWidth" type="text" value="8.5" oninput='reload()' />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="header" type='text' readonly="readonly" value="Height:" /></td>
+                    <td>
+                        <input class="parameter" id="targetHeight" type="text" value="11" oninput='reload()' />
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <input class="header" type='text' readonly="readonly" value="DPI:" /></td>
+                    <td>
+                        <input class="parameter" id="dpi" type="text" value="96" oninput='reload()' />
+                    </td>
+                </tr>
+            </table>
+        </nav>
+        <article>
+            <canvas id="myCanvas" style="display: none;"></canvas>
+            <img id="canvasImg" alt="Right click to save me!">
+        </article>
+    </div>
+    <script src="TargetMaker.js">
+    </script>
+</body>
+</html>
